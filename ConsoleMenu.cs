@@ -13,7 +13,7 @@ namespace JSON_XML
             
             var filePath = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
-                    .Title("Select [green]txt file[/]")
+                    .Title("Select [green].json file[/]")
                     .PageSize(10)
                     .MoreChoicesText("[grey](Move up and down to select file)[/]")
                     .AddChoices(dataProvider.OutputOfExistingFiles()));
