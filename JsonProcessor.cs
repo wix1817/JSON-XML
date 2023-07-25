@@ -12,7 +12,6 @@ public class JsonProcessor
         Path = path;
     }
     
-
     public string Parce()
     {
         try
@@ -22,12 +21,10 @@ public class JsonProcessor
             {
                 squad = JsonSerializer.Deserialize<Squad>(file.ReadToEnd());
             }
-            
             using (var xmlFile = new FileStream(System.IO.Path.ChangeExtension(Path, ".xml"), FileMode.CreateNew))
             {
                 new XmlSerializer(typeof(Squad)).Serialize(xmlFile, squad);
             }
-            
             return "Done";
         }
         catch (Exception e)

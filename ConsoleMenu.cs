@@ -8,16 +8,13 @@ namespace JSON_XML
         public static void Run()
         {
             Path = AnsiConsole.Ask<string>("Input file path: ");
-            
             DataProvider dataProvider = new DataProvider(Path);
-            
             var filePath = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
                     .Title("Select [green].json file[/]")
                     .PageSize(10)
                     .MoreChoicesText("[grey](Move up and down to select file)[/]")
                     .AddChoices(dataProvider.OutputOfExistingFiles()));
-            
             JsonProcessor data = new JsonProcessor(filePath);
             Console.WriteLine(data.Parce());
         }

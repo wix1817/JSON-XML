@@ -1,4 +1,3 @@
-﻿
-using JSON_XML;
+﻿using JSON_XML;
 
 ConsoleMenu.Run();

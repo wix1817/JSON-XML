@@ -12,7 +12,6 @@ public class DataProvider
     public string[] OutputOfExistingFiles()
     {
         string[] files = Directory.GetFiles(@$"{Path}", "*.json");
-
         return files;
     }
         
@@ -30,7 +29,6 @@ public class DataProvider
                 return e.ToString();
             }
         }
-
         return "Error: FileNotExist";
     }
 }
